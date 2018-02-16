@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8">
+   <title>Test Vue.js</title>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+   <link rel="stylesheet" href="style.css">
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+</head>
+
+<body>
+   <template id="table-template">
+      <table>
+         <thead>
+            <tr>
+               <th v-for="key in columns" @click="sortBy(key)" :class="{ active: sortKey == key }">
+                  {{ key | capitalize }}
+                  <span class="arrow" :class="sortOrders[key] > 0 ? 'asc' : 'dsc'"></span>
+               </th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr v-for="entry in filteredData">
+               <td v-for="key in columns">
+                  {{entry[key]}}
+               </td>
+            </tr>
+            <tr id="total">
+              <td colspan="3"><b>Total:</b></td>
+              <td><b>{{ count }}</b></td>
+            </tr>
+          </tbody>
+      </table>
+   </template>
+
+   <section class="container text-center my-5">
+
+      <div id="app">
+         <form id="search">
+            Search: <input name="query" v-model="searchInput" autofocus>
+         </form>
+
+
+         <demo-grid :data="gridData" :columns="gridColumns" :filter-key="searchInput">
+         </demo-grid>
+
+      </div>
+   </section>
+</body>
+
+<script src="app.js"></script>
+
+</html>
