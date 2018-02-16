@@ -1,14 +1,3 @@
-// var testData = [
-//   {"id":"17d5653e-ab63-44cb-b1f6-403d9d7c48a0","name":"Twitterlist","location":"Namur","currency":62675},
-//   {"id":"9eee0e4e-d3a7-4a4c-aca8-00077164abf2","name":"Mydo","location":"Bojong","currency":18917},
-//   {"id":"6d3a7fd5-da98-4fc8-9818-c59ac9b15d36","name":"Gigazoom","location":"Marshintsy","currency":89681},
-//   {"id":"0146f5e8-226b-468b-82b2-66669dec26b2","name":"BlogXS","location":"Snegiri","currency":37538},
-//   {"id":"f9f903e5-4877-4147-bca2-988b1a838dcd","name":"Edgeify","location":"Pingyang","currency":25537},
-//   {"id":"d31a647e-5aca-4442-9ffc-638cccce00d2","name":"Innotype","location":"Shentong","currency":4115},
-//   {"id":"d31a647e-5aca-4442-9ffc-638cccce00d2","name":"Innotype","location":"Shentong","currency":4115},
-//   {"id":"28256d73-8c9c-4005-bdda-186dbf3b0ea4","name":"Yacero","location":"Couva","currency":26663}
-// ];
-
 Vue.component('demo-grid', {
   template: '#table-template',
   props: {
